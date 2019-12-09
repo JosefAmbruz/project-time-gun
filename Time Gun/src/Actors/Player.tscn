@@ -64,3 +64,5 @@ anims/Run = SubResource( 3 )
 current = true
 smoothing_enabled = true
 smoothing_speed = 7.0
+
+[node name="bullet_container" type="Node" parent="."]
