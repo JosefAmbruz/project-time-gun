@@ -59,3 +59,8 @@ autoplay = "Idle"
 playback_speed = 2.0
 anims/Idle = SubResource( 2 )
 anims/Run = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+smoothing_speed = 7.0
