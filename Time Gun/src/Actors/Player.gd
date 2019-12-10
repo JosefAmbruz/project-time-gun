@@ -19,7 +19,7 @@ func fire():
 	if Input.is_action_just_pressed("mouse_left"):
 #		print("bang!")
 		var Bullet = bullet.instance()
-		$bullet_container.add_child(Bullet)
+		$Barrel.add_child(Bullet)
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())	#mouse movement

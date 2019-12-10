@@ -12,7 +12,6 @@ extents = Vector2( 4.93478, 5.02044 )
 collision_layer = 8
 collision_mask = 2
 script = ExtResource( 2 )
-speed = 400
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -22,3 +21,4 @@ shape = SubResource( 1 )
 
 [node name="Notifier" type="VisibilityNotifier2D" parent="."]
 scale = Vector2( 0.413826, 0.361489 )
+[connection signal="screen_exited" from="Notifier" to="." method="_on_Notifier_screen_exited"]

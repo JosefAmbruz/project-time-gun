@@ -1,20 +1,22 @@
 extends KinematicBody2D
-export var speed = 600
 
-func get_direction():
-	var direction = get_global_mouse_position()
-	return direction
+var speed = 750
+var velocity = Vector2()
 
-func is_outside_screen():
-	if not get_node("Notifier").is_on_screen():
-		queue_free()
-
-func _ready() -> void:
-	pass
+func start(pos, dir):
+	position = pos
+	rotation = dir
+	velocity = Vector2(speed, 0).rotated(rotation)
 	
 
-func _process(delta: float) -> void:
-	get_direction()
-	move_and_slide(get_direction()* speed * delta) 
-	is_outside_screen()
-	
+func _physics_process(delta: float) -> void:
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		velocity = velocity.bounce(collision.normal)
+		if collision.collider.has_method("hit"):
+			collision.collider.hit()
+			
+
+
+func _on_Notifier_screen_exited() -> void:
+	queue_free()
