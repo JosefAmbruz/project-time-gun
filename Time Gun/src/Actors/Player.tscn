@@ -42,10 +42,14 @@ tracks/0/keys = {
 }
 
 [node name="Player" type="KinematicBody2D"]
+collision_mask = 6
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 100
+max_speed = 350
+acceleration = 25
 
 [node name="player" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -65,4 +69,4 @@ current = true
 smoothing_enabled = true
 smoothing_speed = 7.0
 
-[node name="bullet_container" type="Node" parent="."]
+[node name="bullet_container" type="Node2D" parent="."]
