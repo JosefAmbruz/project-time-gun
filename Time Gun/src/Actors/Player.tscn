@@ -71,5 +71,5 @@ smoothing_speed = 7.0
 
 [node name="bullet_container" type="Node2D" parent="."]
 
-[node name="Barrel" type="Position2D" parent="."]
-position = Vector2( 28.2608, 0.926586 )
+[node name="Barrel" type="Node2D" parent="."]
+position = Vector2( 27.2071, 2.05337 )
