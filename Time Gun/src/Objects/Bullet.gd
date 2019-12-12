@@ -1,13 +1,12 @@
 extends KinematicBody2D
 
 var speed = 750
-	
+var target = get_global_mouse_position()
+var start_position = get_global_position()
+var target_direction = (start_position - target).normalized()
 
 func _physics_process(delta: float) -> void:
-	var speed_x = 0
-	var speed_y = 1
-	var motion = Vector2(speed_x, speed_y) * speed
-	set_position(get_position() + motion * delta)
+	move_and_slide(target_direction * speed * delta)
 
 
 func _on_Notifier_screen_exited() -> void:

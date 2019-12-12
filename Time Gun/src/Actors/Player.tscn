@@ -71,3 +71,6 @@ smoothing_speed = 7.0
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 27.7205, 1.02669 )
+
+[node name="Position2D2" type="Position2D" parent="."]
+position = Vector2( 63.6544, 1.02669 )
