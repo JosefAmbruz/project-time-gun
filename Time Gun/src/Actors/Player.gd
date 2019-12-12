@@ -16,10 +16,11 @@ func get_direction():
 	return direction
 
 func fire():
-	if Input.is_action_just_pressed("mouse_left"):
-#		print("bang!")
+	if Input.is_action_pressed("mouse_left"):
 		var Bullet = bullet.instance()
-		$Barrel.add_child(Bullet)
+		get_parent().add_child(Bullet)
+		Bullet.set_position($Position2D.get_global_position())
+		Bullet.set_rotation($Position2D.get_global_rotation())
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())	#mouse movement

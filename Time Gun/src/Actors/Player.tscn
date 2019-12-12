@@ -69,7 +69,5 @@ current = true
 smoothing_enabled = true
 smoothing_speed = 7.0
 
-[node name="bullet_container" type="Node2D" parent="."]
-
-[node name="Barrel" type="Node2D" parent="."]
-position = Vector2( 27.2071, 2.05337 )
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 27.7205, 1.02669 )
