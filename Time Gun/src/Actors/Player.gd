@@ -23,6 +23,7 @@ func fire():
 		can_shoot = false
 		$Cooldown.start()
 		var dir = Vector2(1, 0).rotated($Position2D.global_rotation)
+		$Fire.play("Muzzle")
 		var bullet_slow = BulletSlow.instance()
 		get_parent().add_child(bullet_slow)
 		bullet_slow.start($Position2D.global_position, dir)
