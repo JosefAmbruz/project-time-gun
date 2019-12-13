@@ -53,10 +53,11 @@ acceleration = 25
 
 [node name="player" type="Sprite" parent="."]
 position = Vector2( 0, -7.70013 )
-rotation = 0.26784
+rotation = 0.219479
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -1.84464 )
 shape = SubResource( 1 )
 
